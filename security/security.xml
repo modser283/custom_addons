@@ -1,0 +1,25 @@
+<odoo>
+    <record id="request_category" model="ir.module.category">
+        <field name="name">Purchase Requests</field>
+    </record>
+
+    <record id="request_manager_group" model="res.groups">
+        <field name="name">Purchase Request Manager</field>
+        <field name="category_id" ref="purchase_re.request_category"/>
+    </record>
+
+    <record id="request_user_group" model="res.groups">
+        <field name="name">Purchase Request User</field>
+        <field name="category_id" ref="purchase_re.request_category"/>
+    </record>
+
+    <record id="request_by_user" model="ir.rule">
+        <field name="name">request.by.user</field>
+        <field name="model_id" ref="purchase_re.model_purchase_re"/>
+        <field name="domain_force">[('create_uid', '=', user.id)]</field>
+        <field name="perm_read" eval="True"/>
+        <field name="perm_write" eval="True"/>
+        <field name="perm_create" eval="True"/>
+        <field name="perm_unlink" eval="True"/>
+    </record>
+</odoo>

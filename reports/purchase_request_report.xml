@@ -1,0 +1,68 @@
+<odoo>
+    <record id="purchase_request_report" model="ir.actions.report">
+        <field name="name">Purchase Request Report</field>
+        <field name="model">purchase.re</field>
+        <field name="report_type">qweb-html</field>
+        <field name="binding_model_id" ref="model_purchase_re"/>
+        <field name="binding_type">report</field>
+        <field name="report_name">purchase_re.purchase_request_report_template</field>
+    </record>
+    <template id="purchase_request_report_template">
+        <t t-call="web.html_container">
+            <t t-call="web.external_layout">
+                <t t-foreach="docs" t-as="rec">
+                    <h1>Purchase Request Report</h1>
+                     <style>
+                        table{
+                        width:100%;
+                        border:1px solid #3adad;
+                        border-collapse:collapse;
+                        padding:spx;
+                        }
+                        table th{
+                        border:1xp solid #3adad;
+                        padding:spx;
+                        background: #f0f0f0;
+                        color: #313030;
+                        }
+                        table td{
+                        border:1px solid #3adad;
+                        text-align:center;
+                        padding:spx;
+                        background: #ffffff;
+                        color: #313030;}
+                    </style>
+                    <table>
+                        <thead>
+                            <th colspan="4" >Purchase Request info</th>
+                        </thead>
+                        <tbody>
+                            <td>Request Date</td>
+                            <td><t t-esc="rec.request_date"/></td>
+                            <td>Requested By</td>
+                            <td><t t-esc="rec.requested_by.name"/></td>
+                        </tbody>
+                    </table>
+                    <br/>
+                    <table>
+                        <thead>
+                            <th>Product</th>
+                            <th>Quantity</th>
+                        </thead>
+                        <tbody>
+                            <t t-foreach="rec.request_line" t-as="line"/>
+                            <tr>
+                            <td>
+                                <t t-esc="line.product_id.name"/>
+                            </td>
+                            <td>
+                                <t t-esc="line.quantity"/>
+                            </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>

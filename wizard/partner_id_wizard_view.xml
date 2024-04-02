@@ -1,0 +1,28 @@
+<odoo>
+    <data>
+        <record id="partner_id_form_wiz" model="ir.ui.view">
+            <field name="name">partner.id.form.view.wiz</field>
+            <field name="model">partner.wizard</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <group>
+                            <field name="partner_id"/>
+                        </group>
+                    </group>
+                    <footer>
+                        <button string="Confirm" type="object" name="partner_name"/>
+                        <button string="Cancel" special="cancel" class="btn btn-secondary"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+        <record id="partner_id_action" model="ir.actions.act_window">
+            <field name="name">Partner Name</field>
+            <field name="res_model">partner.wizard</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record model="request.line" id="demo_data_1">
+        <field name="quantity">10</field>
+    </record>
+</odoo>

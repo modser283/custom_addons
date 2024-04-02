@@ -1,0 +1,168 @@
+<odoo>
+    <record id="request_view_tree" model="ir.ui.view">
+        <field name="name">request tree</field>
+        <field name="model">purchase.re</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="ref"/>
+<!--                <field name="request_line"/>-->
+                <field name="request_date" widget="date"/>
+                <field name="requested_by" widget="many2one_avatar_user"/>
+                <field name="activity_ids" widget="list_activity"/>
+                <field name="state" widget="badge" decoration-muted="state == ('confirm')"
+                decoration-info="state == ('submit')" decoration-success="state == ('received')"/>
+<!--                <field name="description"/>-->
+            </tree>
+        </field>
+
+
+    </record>
+
+    <record id="purchase_request_search" model="ir.ui.view">
+        <field name="name">purchase.request.search</field>
+        <field name="model">purchase.re</field>
+        <field name="arch" type="xml">
+            <search string="Status">
+                <field name="state" string="Status"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="request_view_form" model="ir.ui.view">
+        <field name="name">request form</field>
+        <field name="model">purchase.re</field>
+        <field name="arch" type="xml">
+            <form>
+               <sheet>
+                   <widget name="web_ribbon" title="Received" bg_color="text-bg-success" attrs="{'invisible':[('state', '!=', 'received')]}"/>
+                   <div name="button_box" class="oe_button_box">
+                       <button name="action_open_related_rfq"
+                               type="object" icon="fa-shopping-cart" string="RFQ"/>
+                   </div>
+                   <header>
+                       <button name="action_draft" type="object" class="btn-primary" string="Set To Draft" attrs="{'invisible':[('state', '=', 'submit')]}"/>
+                       <button name="action_submit" type="object" class="btn-secondary" string="Submit" attrs="{'invisible':[('state', '=', 'confirm')]}"/>
+                       <button name="action_confirm" type="object" class="btn-secondary" string="Confirm" attrs="{'invisible':[('state', '=', 'confirm')]}"
+                               groups="purchase_re.request_manager_group"/>
+                       <button name="action_purchase_order" type="object" class="btn-secondary" string="Create RFQ"
+                               attrs="{'invisible':[('state', '!=', 'confirm')]}" groups="purchase_re.request_manager_group"/>
+                       <field name="state"  widget="statusbar"/>
+                   </header>
+                   <div class="oe_title">
+                       <label for="ref"/>
+                       <h1>
+                           <field name="ref"/>
+                       </h1>
+
+                   </div>
+                   <group>
+                       <group string="Request Info">
+                           <field name="request_date" attrs="{'readonly':[('state', '=', 'confirm')]}"/>
+                           <field name="requested_by" attrs="{'readonly':[('state', '=', 'confirm')]}"/>
+                       </group>
+                   </group>
+                   <notebook>
+                       <page string="Product Line">
+                           <field name="request_line" attrs="{'readonly':[('state', '=', 'confirm')]}">
+                               <tree editable="bottom">
+                                   <field name="product_id" widget="%33" />
+                                   <field name="quantity" widget="%33" />
+                                   <field name="expected_date" widget="%33" />
+                                   <field name="description" widget="%33" />
+                               </tree>
+                           </field>
+                       </page>
+                   </notebook>
+               </sheet>
+
+                <div class="oe_chatter">
+                        <field name="message_follower_ids"/>
+                        <field name="message_ids" options="{'post_refresh':'recipients'}"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                </div>
+            </form>
+        </field>
+
+
+    </record>
+    <record id="request_kanban_view" model="ir.ui.view">
+        <field name="name">request.kanban</field>
+        <field name="model">purchase.re</field>
+        <field name="arch" type="xml">
+            <kanban>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div t-attf-class="oe_kanban_global_click">
+                            <div>
+                                <strong>
+                                    <field name="ref"/>
+                                </strong>
+                            </div>
+                            <div>
+                                <strong>
+                                    <field name="request_date"/>
+                                </strong>
+                            </div>
+                            <div>
+                                <strong>
+                                    <field name="state"/>
+                                </strong>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <record id="purchase_request_calender" model="ir.ui.view">
+        <field name="name">purchase request calender</field>
+        <field name="model">purchase.re</field>
+        <field name="arch" type="xml">
+            <calendar string="Request"
+                      date_start="request_date"
+                      date_stop="request_date"
+                      mode="month"
+                      event_open_popup="true"
+                      quick_add="false">
+
+                <field name="requested_by"/>
+                <field name="state"/>
+
+            </calendar>
+        </field>
+
+    </record>
+
+    <record id="purchase_request_gantt" model="ir.ui.view">
+        <field name="name">purchase.request.gantt</field>
+        <field name="model">purchase.re</field>
+        <field name="arch" type="xml">
+            <gantt  color="id" disable_drag_drop="1"
+                    date_start="request_date"
+                   date_stop="request_date"
+                    decoration-danger="state == 'draft'"
+                    decoration-info="state == 'submit'"
+                    decoration-success="state == 'confirm'"
+
+                   default_group_by="requested_by">
+                <field name="state"/>
+            </gantt>
+        </field>
+    </record>
+
+    <record id="request_action" model="ir.actions.act_window">
+        <field name="name">request action</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">purchase.re</field>
+        <field name="view_mode">tree,form,kanban,calendar,gantt</field>
+
+    </record>
+    <menuitem
+        id="request_menu_item"
+        name="Requests"
+        parent="requests_menu"
+        action="request_action"
+    />
+
+</odoo>

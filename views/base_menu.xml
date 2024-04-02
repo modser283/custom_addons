@@ -1,0 +1,17 @@
+<odoo>
+    <menuitem
+        id="purchase_request_root_menu"
+        name="Purchase Re"
+    />
+     <menuitem
+        id="requests_menu"
+        name="Requests"
+        parent="purchase_request_root_menu"
+    />
+         <menuitem
+        id="configuration_menu"
+        name="Configuration"
+        parent="purchase_request_root_menu"
+        groups="purchase_re.request_manager_group"
+    />
+</odoo>
