@@ -1,0 +1,473 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* purchase_re
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-04-07 18:06+0000\n"
+"PO-Revision-Date: 2024-04-07 18:06+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: purchase_re
+#: model_terms:ir.ui.view,arch_db:purchase_re.res_config_settings_view_form
+msgid "<span class=\"o_form_label\">The Default Date Of Request</span>"
+msgstr "التاريخ الافتراضي للطلبات"
+
+#. module: purchase_re
+#: model_terms:ir.ui.view,arch_db:purchase_re.res_config_settings_view_form
+msgid "<span> Date</span>"
+msgstr "التاريخ"
+
+#. module: purchase_re
+#: model:ir.model.fields,field_description:purchase_re.field_purchase_re__message_needaction
+msgid "Action Needed"
+msgstr "الاجراءات المطلوبه"
+
+#. module: purchase_re
+#: model:ir.model.fields,field_description:purchase_re.field_purchase_re__activity_ids
+msgid "Activities"
+msgstr "الانشطه"
+
+#. module: purchase_re
+#: model:ir.model.fields,field_description:purchase_re.field_purchase_re__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "النشاط المستثنى"
+
+#. module: purchase_re
+#: model:ir.model.fields,field_description:purchase_re.field_purchase_re__activity_state
+msgid "Activity State"
+msgstr "حاله الاجراء"
+
+#. module: purchase_re
+#: model:ir.model.fields,field_description:purchase_re.field_purchase_re__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "نوع ايقونه النشاط"
+
+#. module: purchase_re
+#: model:ir.model.fields,field_description:purchase_re.field_purchase_re__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفق"
+
+#. module: purchase_re
+#: model_terms:ir.ui.view,arch_db:purchase_re.partner_id_form_wiz
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: purchase_re
+#: model:ir.model,name:purchase_re.model_res_config_settings
+msgid "Config Settings"
+msgstr "تهيئة الإعدادات "
+
+#. module: purchase_re
+#: model:ir.ui.menu,name:purchase_re.configuration_menu
+msgid "Configuration"
+msgstr "التهيئة"
+
+#. module: purchase_re
+#: model:ir.model.fields.selection,name:purchase_re.selection__purchase_re__state__confirm
+#: model_terms:ir.ui.view,arch_db:purchase_re.partner_id_form_wiz
+#: model_terms:ir.ui.view,arch_db:purchase_re.request_view_form
+msgid "Confirm"
+msgstr "تأكيد"
+
+#. module: purchase_re
+#: model_terms:ir.ui.view,arch_db:purchase_re.request_view_form
+msgid "Create RFQ"
+msgstr "إنشاء عرض اسعار"
+
+#. module: purchase_re
+#: model:ir.model.fields,field_description:purchase_re.field_partner_wizard__create_uid
+#: model:ir.model.fields,field_description:purchase_re.field_purchase_re__create_uid
+#: model:ir.model.fields,field_description:purchase_re.field_request_line__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطه"
+
+#. module: purchase_re
+#: model:ir.model.fields,field_description:purchase_re.field_partner_wizard__create_date
+#: model:ir.model.fields,field_description:purchase_re.field_purchase_re__create_date
+#: model:ir.model.fields,field_description:purchase_re.field_request_line__create_date
+msgid "Created on"
+msgstr "أنشئ على"
+
+#. module: purchase_re
+#: model:ir.model.fields,field_description:purchase_re.field_request_line__description
+msgid "Description"
+msgstr "الوصف"
+
+#. module: purchase_re
+#: model:ir.model.fields,field_description:purchase_re.field_partner_wizard__display_name
+#: model:ir.model.fields,field_description:purchase_re.field_purchase_re__display_name
+#: model:ir.model.fields,field_description:purchase_re.field_request_line__display_name
+msgid "Display Name"
+msgstr "اسم العرض"
+
+#. module: purchase_re
+#: model:ir.model.fields.selection,name:purchase_re.selection__purchase_re__state__draft
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: purchase_re
+#: model:ir.model.fields,field_description:purchase_re.field_request_line__expected_date
+msgid "Expected Date"
+msgstr "التاريخ المتوقع"
+
+#. module: purchase_re
+#: model:ir.model.fields,field_description:purchase_re.field_purchase_re__message_follower_ids
+msgid "Followers"
+msgstr "المتابعون"
+
+#. module: purchase_re
+#: model:ir.model.fields,field_description:purchase_re.field_purchase_re__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "المتابعون(العملاء)"
+
+#. module: purchase_re
+#: model:ir.model.fields,help:purchase_re.field_purchase_re__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "خط رائع"
+
+#. module: purchase_re
+#: model:ir.model.fields,field_description:purchase_re.field_purchase_re__has_message
+msgid "Has Message"
+msgstr "لديخ رسالة"
+
+#. module: purchase_re
+#: model:ir.model.fields,field_description:purchase_re.field_partner_wizard__id
+#: model:ir.model.fields,field_description:purchase_re.field_purchase_re__id
+#: model:ir.model.fields,field_description:purchase_re.field_request_line__id
+msgid "ID"
+msgstr "الرمز"
+
+#. module: purchase_re
+#: model:ir.model.fields,field_description:purchase_re.field_purchase_re__activity_exception_icon
+msgid "Icon"
+msgstr "ايقونه"
+
+#. module: purchase_re
+#: model:ir.model.fields,help:purchase_re.field_purchase_re__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "ايقونه تشير للاجراءات المستثناه"
+
+#. module: purchase_re
+#: model:ir.model.fields,help:purchase_re.field_purchase_re__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "اذا تحققت, هنالك بعض الرسائل تتطلب انتباهك"
+
+#. module: purchase_re
+#: model:ir.model.fields,help:purchase_re.field_purchase_re__message_has_error
+#: model:ir.model.fields,help:purchase_re.field_purchase_re__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "اذا تحققت, هنالك بعض الرسائل مع اخطاْ التسليم"
+
+#. module: purchase_re
+#: model:ir.model.fields,field_description:purchase_re.field_purchase_re__message_is_follower
+msgid "Is Follower"
+msgstr "المتابعون"
+
+#. module: purchase_re
+#: model:ir.model.fields,field_description:purchase_re.field_partner_wizard____last_update
+#: model:ir.model.fields,field_description:purchase_re.field_purchase_re____last_update
+#: model:ir.model.fields,field_description:purchase_re.field_request_line____last_update
+msgid "Last Modified on"
+msgstr "أخر تعديل بواسطه"
+
+#. module: purchase_re
+#: model:ir.model.fields,field_description:purchase_re.field_partner_wizard__write_uid
+#: model:ir.model.fields,field_description:purchase_re.field_purchase_re__write_uid
+#: model:ir.model.fields,field_description:purchase_re.field_request_line__write_uid
+msgid "Last Updated by"
+msgstr "أ×ر تحديث بواسطه"
+
+#. module: purchase_re
+#: model:ir.model.fields,field_description:purchase_re.field_partner_wizard__write_date
+#: model:ir.model.fields,field_description:purchase_re.field_purchase_re__write_date
+#: model:ir.model.fields,field_description:purchase_re.field_request_line__write_date
+msgid "Last Updated on"
+msgstr "أخر تحديث"
+
+#. module: purchase_re
+#: model:ir.model.fields,field_description:purchase_re.field_purchase_re__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "المرفق لارئيسي"
+
+#. module: purchase_re
+#: model:ir.model.fields,field_description:purchase_re.field_purchase_re__message_has_error
+msgid "Message Delivery error"
+msgstr "رسالة خطأ التسليم"
+
+#. module: purchase_re
+#: model:ir.model.fields,field_description:purchase_re.field_purchase_re__message_ids
+msgid "Messages"
+msgstr "الرسائل"
+
+#. module: purchase_re
+#: model:ir.model.fields,field_description:purchase_re.field_purchase_re__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "أخر موع لأجرائي"
+
+#. module: purchase_re
+#: model:ir.model.fields,field_description:purchase_re.field_purchase_re__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "أخر موعد للطلب التالي"
+
+#. module: purchase_re
+#: model:ir.model.fields,field_description:purchase_re.field_purchase_re__activity_summary
+msgid "Next Activity Summary"
+msgstr "ملخص الاجراء التالي"
+
+#. module: purchase_re
+#: model:ir.model.fields,field_description:purchase_re.field_purchase_re__activity_type_id
+msgid "Next Activity Type"
+msgstr "نوع الاجراء التالي"
+
+#. module: purchase_re
+#: model:ir.model.fields,field_description:purchase_re.field_purchase_re__message_needaction_counter
+msgid "Number of Actions"
+msgstr "عدد الاجراءات"
+
+#. module: purchase_re
+#: model:ir.model.fields,field_description:purchase_re.field_purchase_re__message_has_error_counter
+msgid "Number of errors"
+msgstr "عدد الاخطاء"
+
+#. module: purchase_re
+#: model:ir.model.fields,help:purchase_re.field_purchase_re__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "عدد الرسائل التي تتطلب اجراء"
+
+#. module: purchase_re
+#: model:ir.model.fields,help:purchase_re.field_purchase_re__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "عدد الرسائل مع اخطاء التسليم"
+
+#. module: purchase_re
+#: model:ir.model.fields,field_description:purchase_re.field_purchase_re__order_id
+msgid "Order"
+msgstr "أمر"
+
+#. module: purchase_re
+#: model:ir.model.fields,field_description:purchase_re.field_partner_wizard__partner_id
+msgid "Partner"
+msgstr "المورد"
+
+#. module: purchase_re
+#: model:ir.actions.act_window,name:purchase_re.partner_id_action
+msgid "Partner Name"
+msgstr "اسم المورد"
+
+#. module: purchase_re
+#. odoo-python
+#: code:addons/purchase_re/models/purchase_req.py:0
+#, python-format
+msgid "Please Add Valid Number Of Quantity"
+msgstr "الرجاء ادخال الكميه الصحيحه"
+
+#. module: purchase_re
+#: model:ir.model.fields,field_description:purchase_re.field_request_line__product_id
+#: model_terms:ir.ui.view,arch_db:purchase_re.purchase_request_report_template
+msgid "Product"
+msgstr "المنتج"
+
+#. module: purchase_re
+#: model_terms:ir.ui.view,arch_db:purchase_re.request_view_form
+msgid "Product Line"
+msgstr "خط المنتج"
+
+#. module: purchase_re
+#: model:ir.model.fields,field_description:purchase_re.field_purchase_re__purchase_ids
+msgid "Purchase"
+msgstr "المشتريات"
+
+#. module: purchase_re
+#: model:ir.model,name:purchase_re.model_purchase_order
+msgid "Purchase Order"
+msgstr "أمر شراء"
+
+#. module: purchase_re
+#: model:ir.ui.menu,name:purchase_re.purchase_request_root_menu
+msgid "Purchase Re"
+msgstr "طلب الشراء"
+
+#. module: purchase_re
+#: model_terms:ir.ui.view,arch_db:purchase_re.res_config_settings_view_form
+msgid "Purchase Request Management"
+msgstr "ادارة طلبات المشتريات"
+
+#. module: purchase_re
+#: model:res.groups,name:purchase_re.request_manager_group
+msgid "Purchase Request Manager"
+msgstr "كدير طلبات المشتريات"
+
+#. module: purchase_re
+#: model:ir.actions.report,name:purchase_re.purchase_request_report
+#: model_terms:ir.ui.view,arch_db:purchase_re.purchase_request_report_template
+msgid "Purchase Request Report"
+msgstr "تقرير طلب الشراء"
+
+#. module: purchase_re
+#: model:res.groups,name:purchase_re.request_user_group
+msgid "Purchase Request User"
+msgstr "مستخدم طلب الشراء"
+
+#. module: purchase_re
+#: model_terms:ir.ui.view,arch_db:purchase_re.purchase_request_report_template
+msgid "Purchase Request info"
+msgstr "معلومات طلب الشراء"
+
+#. module: purchase_re
+#: model:ir.module.category,name:purchase_re.request_category
+msgid "Purchase Requests"
+msgstr "طلبات الشراء"
+
+#. module: purchase_re
+#: model:ir.model.fields,field_description:purchase_re.field_request_line__quantity
+#: model_terms:ir.ui.view,arch_db:purchase_re.purchase_request_report_template
+msgid "Quantity"
+msgstr "الكميه"
+
+#. module: purchase_re
+#: model_terms:ir.ui.view,arch_db:purchase_re.request_view_form
+msgid "RFQ"
+msgstr "عرض الاسعار"
+
+#. module: purchase_re
+#: model:ir.model.fields.selection,name:purchase_re.selection__purchase_re__state__received
+#: model_terms:ir.ui.view,arch_db:purchase_re.request_view_form
+msgid "Received"
+msgstr "تم الاستلام"
+
+#. module: purchase_re
+#: model:ir.model.fields,field_description:purchase_re.field_purchase_re__ref
+msgid "Reference"
+msgstr "المرجع"
+
+#. module: purchase_re
+#: model:ir.model.fields,field_description:purchase_re.field_purchase_re__request_line
+#: model:ir.model.fields,field_description:purchase_re.field_request_line__request_id
+#: model_terms:ir.ui.view,arch_db:purchase_re.purchase_request_calender
+#: model_terms:ir.ui.view,arch_db:purchase_re.res_config_settings_view_form
+msgid "Request"
+msgstr "الطلب"
+
+#. module: purchase_re
+#: model:ir.model.fields,field_description:purchase_re.field_purchase_re__request_date
+#: model:ir.model.fields,field_description:purchase_re.field_res_config_settings__request_date
+#: model_terms:ir.ui.view,arch_db:purchase_re.purchase_request_report_template
+msgid "Request Date"
+msgstr "تاريخ الطلب"
+
+#. module: purchase_re
+#: model_terms:ir.ui.view,arch_db:purchase_re.request_view_form
+msgid "Request Info"
+msgstr "معلومات الطلب"
+
+#. module: purchase_re
+#: model:ir.model.fields,field_description:purchase_re.field_purchase_re__requested_by
+#: model_terms:ir.ui.view,arch_db:purchase_re.purchase_request_report_template
+msgid "Requested By"
+msgstr "طلب بواسطة"
+
+#. module: purchase_re
+#: model:ir.ui.menu,name:purchase_re.request_menu_item
+#: model:ir.ui.menu,name:purchase_re.requests_menu
+msgid "Requests"
+msgstr "الطلبات"
+
+#. module: purchase_re
+#: model:ir.model.fields,field_description:purchase_re.field_purchase_re__activity_user_id
+msgid "Responsible User"
+msgstr "المستخدم المسؤول"
+
+#. module: purchase_re
+#: model:ir.model.fields,field_description:purchase_re.field_purchase_re__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "رسائل خطأ الاستلام"
+
+#. module: purchase_re
+#: model_terms:ir.ui.view,arch_db:purchase_re.request_view_form
+msgid "Set To Draft"
+msgstr "وضع في المسودة"
+
+#. module: purchase_re
+#: model:ir.actions.act_window,name:purchase_re.request_config_settings_action
+#: model:ir.ui.menu,name:purchase_re.request_config_settings_menu
+msgid "Settings"
+msgstr "الاعدادات"
+
+#. module: purchase_re
+#: model:ir.model.fields,field_description:purchase_re.field_purchase_order__purchase_request_id
+msgid "Source Document"
+msgstr "وثيقة المرجع"
+
+#. module: purchase_re
+#: model:ir.model.fields,field_description:purchase_re.field_purchase_re__state
+#: model_terms:ir.ui.view,arch_db:purchase_re.purchase_request_search
+msgid "Status"
+msgstr "الحاله"
+
+#. module: purchase_re
+#: model:ir.model.fields,help:purchase_re.field_purchase_re__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: purchase_re
+#: model:ir.model.fields.selection,name:purchase_re.selection__purchase_re__state__submit
+#: model_terms:ir.ui.view,arch_db:purchase_re.request_view_form
+msgid "Submit"
+msgstr "تسليم"
+
+#. module: purchase_re
+#: model:ir.model,name:purchase_re.model_stock_picking
+msgid "Transfer"
+msgstr "الشحنة"
+
+#. module: purchase_re
+#: model:ir.model.fields,help:purchase_re.field_purchase_re__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "نوع الاجراء المستثنى في السجل"
+
+#. module: purchase_re
+#: model:ir.model.fields,field_description:purchase_re.field_purchase_re__website_message_ids
+msgid "Website Messages"
+msgstr "رسائل الموقع"
+
+#. module: purchase_re
+#: model:ir.model.fields,help:purchase_re.field_purchase_re__website_message_ids
+msgid "Website communication history"
+msgstr "تاربخ اتصال الموقع"
+
+#. module: purchase_re
+#: model:ir.model,name:purchase_re.model_partner_wizard
+msgid "partner.wizard"
+msgstr "شاشه المورد"
+
+#. module: purchase_re
+#: model:ir.actions.act_window,name:purchase_re.request_action
+msgid "request action"
+msgstr "اجراء الطلب"
+
+#. module: purchase_re
+#: model:ir.model,name:purchase_re.model_request_line
+msgid "request.line"
+msgstr "خط الطلبات"
+
+#. module: purchase_re
+#: model:ir.model,name:purchase_re.model_purchase_re
+msgid "requests Record"
+msgstr "سجل الطلبات"
+
+#. module: purchase_re
+#: model_terms:ir.ui.view,arch_db:purchase_re.request_view_form
+msgid "special Command 2 id 0"
+msgstr "امر خاص"

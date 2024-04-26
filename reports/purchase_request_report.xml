@@ -11,6 +11,7 @@
         <t t-call="web.html_container">
             <t t-call="web.external_layout">
                 <t t-foreach="docs" t-as="rec">
+                    <p t-out="context_timestamp(datetime.datetime.now()).strftime('%d-%m-%y %H:%M')"/>
                     <h1>Purchase Request Report</h1>
                      <style>
                         table{
@@ -37,25 +38,25 @@
                             <th colspan="4" >Purchase Request info</th>
                         </thead>
                         <tbody>
-                            <td>Request Date</td>
-                            <td><t t-esc="rec.request_date"/></td>
-                            <td>Requested By</td>
-                            <td><t t-esc="rec.requested_by.name"/></td>
+                            <td >Request Date</td>
+                            <td ><t t-esc="rec.request_date"/></td>
+                            <td >Requested By</td>
+                            <td ><t t-esc="rec.requested_by.name"/></td>
                         </tbody>
                     </table>
                     <br/>
                     <table>
                         <thead>
-                            <th>Product</th>
-                            <th>Quantity</th>
+                            <th >Product</th>
+                            <th >Quantity</th>
                         </thead>
-                        <tbody>
+                        <tbody >
                             <t t-foreach="rec.request_line" t-as="line"/>
                             <tr>
                             <td>
                                 <t t-esc="line.product_id.name"/>
                             </td>
-                            <td>
+                            <td >
                                 <t t-esc="line.quantity"/>
                             </td>
                             </tr>
@@ -64,5 +65,6 @@
                 </t>
             </t>
         </t>
+        <p t-out="context_timestamp(datetime.datetime.now()).strftime('%d-%m-%y %H:%M')"/>
     </template>
 </odoo>

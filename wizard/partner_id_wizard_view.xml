@@ -4,10 +4,16 @@
             <field name="name">partner.id.form.view.wiz</field>
             <field name="model">partner.wizard</field>
             <field name="arch" type="xml">
-                <form>
+                <form string="Create RFQ">
+                     <separator string="Create New RFQ :" />
                     <group>
-                        <group>
+                        <group string="Request Info">
+                            <field name="request_number"/>
                             <field name="partner_id"/>
+                        </group>
+                        <group string="Request Datetime and User">
+                            <field name="request_Date"/>
+                            <field name="requested_by"/>
                         </group>
                     </group>
                     <footer>
@@ -18,7 +24,7 @@
             </field>
         </record>
         <record id="partner_id_action" model="ir.actions.act_window">
-            <field name="name">Partner Name</field>
+            <field name="name">Create RFQ</field>
             <field name="res_model">partner.wizard</field>
             <field name="view_mode">form</field>
             <field name="target">new</field>

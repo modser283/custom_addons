@@ -13,8 +13,12 @@
         'views/request_view.xml',
         'views/res_config_settings_views.xml',
         'views/purchase_order_view.xml',
+        'views/request_history_view.xml',
         'reports/purchase_request_report.xml',
         'wizard/partner_id_wizard_view.xml',
     ],
+    'assets':{
+        'web.report_assets_common':['/purchase_re/static/scr/css/font.css']
+    },
     'application': True,
 }

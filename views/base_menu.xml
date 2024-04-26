@@ -2,6 +2,7 @@
     <menuitem
         id="purchase_request_root_menu"
         name="Purchase Re"
+         web_icon="purchase_re.static/description/purchase.png"
     />
      <menuitem
         id="requests_menu"

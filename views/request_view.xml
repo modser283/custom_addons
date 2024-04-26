@@ -24,6 +24,15 @@
         <field name="arch" type="xml">
             <search string="Status">
                 <field name="state" string="Status"/>
+                <field name="requested_by" string="Requested By"/>
+                <filter name="requested_by" string="Requested By"/>
+                <group expand="0" string="Group By">
+                    <filter string="Requested By" name="group_by_requested" context="{'group_by':'requested_by'}"/>
+                </group>
+                <searchpanel>
+                    <field name="state" icon="fa-users" enable_counters="1" />
+<!--                    select="multi"-->
+                </searchpanel>
             </search>
         </field>
     </record>
@@ -34,19 +43,26 @@
         <field name="arch" type="xml">
             <form>
                <sheet>
+                   <div class="oe_title">
+                       <h1>
+                           <field name="priority" widget="priority" class="mr-3"/>
+                       </h1>
+                   </div>
                    <widget name="web_ribbon" title="Received" bg_color="text-bg-success" attrs="{'invisible':[('state', '!=', 'received')]}"/>
                    <div name="button_box" class="oe_button_box">
                        <button name="action_open_related_rfq"
                                type="object" icon="fa-shopping-cart" string="RFQ"/>
                    </div>
                    <header>
-                       <button name="action_draft" type="object" class="btn-primary" string="Set To Draft" attrs="{'invisible':[('state', '=', 'submit')]}"/>
-                       <button name="action_submit" type="object" class="btn-secondary" string="Submit" attrs="{'invisible':[('state', '=', 'confirm')]}"/>
-                       <button name="action_confirm" type="object" class="btn-secondary" string="Confirm" attrs="{'invisible':[('state', '=', 'confirm')]}"
-                               groups="purchase_re.request_manager_group"/>
+                       <button name="action_draft" type="object" class="btn-primary" string="Set To Draft" attrs="{'invisible':[('state', 'in', 'received')]}"/>
+                       <button name="action_submit" type="object" class="btn-secondary" string="Submit" attrs="{'invisible':[('state', '=', 'received')]}"/>
+                       <button name="action_confirm" type="object" class="btn-secondary" string="Confirm" attrs="{'invisible':[('state', '=', 'received')]}"
+                               groups="purchase_re.request_manager_group" confirm="Are you sure you want to confirm this request ?"/>
                        <button name="action_purchase_order" type="object" class="btn-secondary" string="Create RFQ"
-                               attrs="{'invisible':[('state', '!=', 'confirm')]}" groups="purchase_re.request_manager_group"/>
+                               attrs="{'invisible':[('state', '!=', 'confirm')]}" groups="purchase_re.request_manager_group"
+                       context="{'default_request_number': active_id}"/>
                        <field name="state"  widget="statusbar"/>
+                       <button name="create_partner" type="object" string="Create Partner"/>
                    </header>
                    <div class="oe_title">
                        <label for="ref"/>
@@ -60,6 +76,10 @@
                            <field name="request_date" attrs="{'readonly':[('state', '=', 'confirm')]}"/>
                            <field name="requested_by" attrs="{'readonly':[('state', '=', 'confirm')]}"/>
                        </group>
+                       <group string="">
+                           <field name="company_id"/>
+                           <field name="currency_id"/>
+                       </group>
                    </group>
                    <notebook>
                        <page string="Product Line">
@@ -67,10 +87,22 @@
                                <tree editable="bottom">
                                    <field name="product_id" widget="%33" />
                                    <field name="quantity" widget="%33" />
+                                   <field name="expected_price" widget="monetary" />
                                    <field name="expected_date" widget="%33" />
                                    <field name="description" widget="%33" />
+                                   <field name="currency_id" invisible="1" />
+                                   <field name="subtotal" widget="%33" sum="Total" />
                                </tree>
                            </field>
+                       </page>
+                       <page string="Other Information">
+                           <group>
+                               <field name="request_for" string="Request For"/>
+                               <field name="request_company"/>
+                           </group>
+                           <group>
+                               <field name="payment_term"/>
+                           </group>
                        </page>
                    </notebook>
                </sheet>
@@ -150,12 +182,25 @@
             </gantt>
         </field>
     </record>
+    <record id="purchase_request_pivot_view" model="ir.ui.view">
+        <field name="name">purchase.request.pivot.view</field>
+        <field name="model">purchase.re</field>
+        <field name="arch" type="xml">
+            <pivot>
+                <field name="state"/>
+                <field name="requested_by" type="row"/>
+            </pivot>
+        </field>
+    </record>
+
+
 
     <record id="request_action" model="ir.actions.act_window">
         <field name="name">request action</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">purchase.re</field>
-        <field name="view_mode">tree,form,kanban,calendar,gantt</field>
+        <field name="view_mode">tree,form,kanban,calendar,gantt,pivot</field>
+        <field name="context">{'search_default_group_by_requested':1}</field>
 
     </record>
     <menuitem

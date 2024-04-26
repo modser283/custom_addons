@@ -1,0 +1,10 @@
+@font-face{
+font-family: "Cairo-Black"
+src: url(/cus/purchase_re/static/scr/fonts/Cairo-Bold.ttf)
+}
+
+
+@font-face{
+font-family: "Cairo-VariableFont"
+src: url(/cus/purchase_re/static/scr/fonts/Cairo-VariableFont_slnt,wght.ttf)
+}
